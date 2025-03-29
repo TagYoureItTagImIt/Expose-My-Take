@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .sport-card {
+    @apply relative overflow-hidden rounded-lg border-2 transition-all hover:scale-[1.02];
+  }
+  
+  .sport-card.MLB { @apply border-red-500 bg-gradient-to-br from-red-900/50 to-gray-900; }
+  .sport-card.NFL { @apply border-green-500 bg-gradient-to-br from-green-900/50 to-gray-900; }
+  .sport-card.NHL { @apply border-blue-500 bg-gradient-to-br from-blue-900/50 to-gray-900; }
+  .sport-card.NBA { @apply border-orange-500 bg-gradient-to-br from-orange-900/50 to-gray-900; }
+  .sport-card.MLS { @apply border-purple-500 bg-gradient-to-br from-purple-900/50 to-gray-900; }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-2 rounded-lg font-bold 
+           text-white shadow-lg transition-all hover:from-blue-700 hover:to-blue-900 
+           hover:shadow-blue-500/20 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800 px-6 py-2 rounded-lg font-bold text-gray-100 
+           shadow-lg transition-all hover:bg-gray-700 hover:-translate-y-0.5;
+  }
+
+  .input-field {
+    @apply bg-gray-800 border-gray-700 text-white rounded-lg focus:ring-blue-500 
+           focus:border-blue-500 block w-full p-2.5;
+  }
+}
